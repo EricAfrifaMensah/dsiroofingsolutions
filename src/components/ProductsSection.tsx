@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { ShoppingCart, Star } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
 
 const ProductsSection = () => {
   const products = [
@@ -50,9 +52,26 @@ const ProductsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product) => (
             <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-                <span className="text-gray-600 text-lg font-medium">Product Image</span>
-              </div>
+              <Carousel 
+                className="w-full h-48"
+                plugins={[
+                  Autoplay({
+                    delay: 2500,
+                  }),
+                ]}
+              >
+                <CarouselContent>
+                  {[1, 2, 3].map((imageIndex) => (
+                    <CarouselItem key={imageIndex}>
+                      <div className="h-48 bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
+                        <span className="text-gray-600 text-lg font-medium">Product Image {imageIndex}</span>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-2" />
+                <CarouselNext className="right-2" />
+              </Carousel>
               
               <CardHeader>
                 <CardTitle className="text-xl font-bold text-roofing-navy">

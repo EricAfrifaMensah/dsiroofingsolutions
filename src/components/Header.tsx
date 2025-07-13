@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Menu, X } from "lucide-react";
+import { MessageCircle, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const Header = () => {
@@ -18,15 +18,12 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="bg-yellow-500 p-2 rounded">
-              <div className="w-8 h-8 bg-black rounded-sm flex items-center justify-center">
-                <span className="text-yellow-500 font-bold text-lg">D</span>
-              </div>
-            </div>
-            <div>
-              <h1 className="text-white font-bold text-xl">DSI ROOFING SOLUTIONS</h1>
-            </div>
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/bfb901bd-bb03-415a-b017-69acabdb1b08.png" 
+              alt="DSI Roofing Solutions" 
+              className="h-12 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -45,8 +42,9 @@ const Header = () => {
               HOME
             </Button>
             <Button 
-              variant="roofing-nav" 
+              variant="orange" 
               onClick={() => scrollToSection('services')}
+              className="px-6 py-2"
             >
               OUR SERVICES
             </Button>
@@ -54,14 +52,25 @@ const Header = () => {
 
           {/* Social Icons & Contact */}
           <div className="hidden md:flex items-center space-x-4">
-            <Phone className="w-5 h-5 text-white" />
+            <button 
+              onClick={() => window.open('https://wa.me/1234567890', '_blank')}
+              className="hover:scale-110 transition-transform duration-200"
+            >
+              <MessageCircle className="w-5 h-5 text-white" />
+            </button>
             <div className="flex space-x-2">
-              <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+              <button 
+                onClick={() => window.open('https://facebook.com', '_blank')}
+                className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors duration-200"
+              >
                 <span className="text-white text-sm">f</span>
-              </div>
-              <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+              </button>
+              <button 
+                onClick={() => window.open('https://instagram.com', '_blank')}
+                className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors duration-200"
+              >
                 <span className="text-white text-sm">@</span>
-              </div>
+              </button>
             </div>
           </div>
 
@@ -95,7 +104,7 @@ const Header = () => {
                 HOME
               </Button>
               <Button 
-                variant="roofing-nav" 
+                variant="orange" 
                 onClick={() => scrollToSection('services')}
                 className="w-full"
               >

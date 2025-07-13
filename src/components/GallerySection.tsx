@@ -6,21 +6,27 @@ const GallerySection = () => {
 
   const categories = [
     { id: 'all', name: 'All Projects' },
-    { id: 'residential', name: 'Residential' },
-    { id: 'commercial', name: 'Commercial' },
-    { id: 'milano', name: 'Milano Sheets' }
+    { id: 'milano', name: 'Milano Sheets' },
+    { id: 'bond', name: 'Bond Sheets' },
+    { id: 'classic', name: 'Classic' },
+    { id: 'romania', name: 'Romania Sheets' },
+    { id: 'shingle', name: 'Shingle Sheets' },
+    { id: 'woodshake', name: 'Woodshake Sheets' }
   ];
 
   const galleryItems = [
-    { id: 1, category: 'residential', title: 'Modern Family Home', location: 'Lagos, Nigeria' },
-    { id: 2, category: 'commercial', title: 'Office Complex', location: 'Abuja, Nigeria' },
-    { id: 3, category: 'milano', title: 'Milano Roofing Installation', location: 'Ibadan, Nigeria' },
-    { id: 4, category: 'residential', title: 'Luxury Villa', location: 'Port Harcourt, Nigeria' },
-    { id: 5, category: 'commercial', title: 'Shopping Mall', location: 'Kano, Nigeria' },
-    { id: 6, category: 'milano', title: 'Milano Classic Style', location: 'Benin, Nigeria' },
-    { id: 7, category: 'residential', title: 'Contemporary Home', location: 'Calabar, Nigeria' },
-    { id: 8, category: 'commercial', title: 'Industrial Building', location: 'Kaduna, Nigeria' },
-    { id: 9, category: 'milano', title: 'Milano Premium', location: 'Ilorin, Nigeria' }
+    { id: 1, category: 'milano', title: 'Milano Roofing Installation', location: 'Lagos, Nigeria' },
+    { id: 2, category: 'bond', title: 'Bond Sheets Project', location: 'Abuja, Nigeria' },
+    { id: 3, category: 'classic', title: 'Classic Roofing Style', location: 'Ibadan, Nigeria' },
+    { id: 4, category: 'romania', title: 'Romania Roofing Project', location: 'Port Harcourt, Nigeria' },
+    { id: 5, category: 'shingle', title: 'Shingle Sheets Installation', location: 'Kano, Nigeria' },
+    { id: 6, category: 'woodshake', title: 'Woodshake Premium', location: 'Benin, Nigeria' },
+    { id: 7, category: 'milano', title: 'Milano Classic Style', location: 'Calabar, Nigeria' },
+    { id: 8, category: 'bond', title: 'Bond Commercial Project', location: 'Kaduna, Nigeria' },
+    { id: 9, category: 'classic', title: 'Classic Residential', location: 'Ilorin, Nigeria' },
+    { id: 10, category: 'romania', title: 'Romania Premium', location: 'Owerri, Nigeria' },
+    { id: 11, category: 'shingle', title: 'Shingle Luxury Villa', location: 'Uyo, Nigeria' },
+    { id: 12, category: 'woodshake', title: 'Woodshake Modern Home', location: 'Lokoja, Nigeria' }
   ];
 
   const filteredItems = selectedCategory === 'all' 

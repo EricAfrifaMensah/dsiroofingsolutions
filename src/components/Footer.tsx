@@ -1,4 +1,4 @@
-import { Phone, Mail, Clock, MapPin } from "lucide-react";
+import { Phone, Mail, Clock, MapPin, MessageCircle, Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -110,12 +110,12 @@ const Footer = () => {
 
               <div>
                 <h4 className="font-semibold mb-2">Contact Form</h4>
-                <a 
-                  href="#contact" 
-                  className="text-white hover:text-yellow-400 transition-colors cursor-pointer"
+                <button 
+                  onClick={() => window.open('mailto:dsisolutions@gmail.com', '_self')}
+                  className="text-white hover:text-yellow-400 transition-colors cursor-pointer hover:scale-105 duration-200"
                 >
                   News Update (Subscribe)
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -138,14 +138,23 @@ const Footer = () => {
               <div>
                 <h4 className="text-yellow-400 font-semibold mb-2">SOCIAL MEDIA</h4>
                 <div className="flex space-x-4">
-                  <button className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
-                    <span className="text-white text-sm">💬</span>
+                  <button 
+                    onClick={() => window.open('https://wa.me/2349030653059', '_blank')}
+                    className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors hover:scale-110 duration-200"
+                  >
+                    <MessageCircle className="w-4 h-4 text-white" />
                   </button>
-                  <button className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
-                    <span className="text-white text-sm">f</span>
+                  <button 
+                    onClick={() => window.open('https://facebook.com', '_blank')}
+                    className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors hover:scale-110 duration-200"
+                  >
+                    <Facebook className="w-4 h-4 text-white" />
                   </button>
-                  <button className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
-                    <span className="text-white text-sm">📷</span>
+                  <button 
+                    onClick={() => window.open('https://instagram.com', '_blank')}
+                    className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors hover:scale-110 duration-200"
+                  >
+                    <Instagram className="w-4 h-4 text-white" />
                   </button>
                 </div>
               </div>

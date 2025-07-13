@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Home, Wrench, Shield, Phone } from "lucide-react";
+import { Home, Wrench, Shield, MessageCircle, Settings } from "lucide-react";
 
 const ServicesSection = () => {
   const services = [
@@ -24,12 +24,19 @@ const ServicesSection = () => {
       description: "Expert consultation and design services for your roofing projects",
       icon: Shield,
       features: ["Design Planning", "Material Selection", "Cost Estimation"]
+    },
+    {
+      id: 4,
+      title: "Roofing Repair Services",
+      description: "Professional roof repair and restoration services for all roofing types",
+      icon: Settings,
+      features: ["Leak Repairs", "Roof Restoration", "Emergency Services"]
     }
   ];
 
   const handleGetQuote = (serviceId: number) => {
     // In a real application, this would open a contact form or redirect
-    window.open('tel:+2349030653059', '_self');
+    window.open('https://wa.me/2349030653059', '_blank');
   };
 
   return (
@@ -44,7 +51,7 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service) => {
             const IconComponent = service.icon;
             return (
@@ -74,9 +81,9 @@ const ServicesSection = () => {
                   <Button 
                     onClick={() => handleGetQuote(service.id)}
                     variant="roofing-primary"
-                    className="w-full"
+                    className="w-full hover:scale-105 transition-transform duration-200"
                   >
-                    <Phone className="mr-2 w-4 h-4" />
+                    <MessageCircle className="mr-2 w-4 h-4" />
                     Get Quote
                   </Button>
                 </CardContent>
@@ -93,9 +100,10 @@ const ServicesSection = () => {
           <Button 
             variant="orange"
             size="lg"
-            onClick={() => window.open('tel:+2349030653059', '_self')}
+            onClick={() => window.open('https://wa.me/2349030653059', '_blank')}
+            className="hover:scale-105 transition-transform duration-200"
           >
-            <Phone className="mr-2 w-5 h-5" />
+            <MessageCircle className="mr-2 w-5 h-5" />
             Contact Us Today
           </Button>
         </div>
