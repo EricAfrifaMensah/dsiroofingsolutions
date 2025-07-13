@@ -52,6 +52,10 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				'roofing-blue': 'hsl(var(--roofing-blue))',
+				'roofing-blue-dark': 'hsl(var(--roofing-blue-dark))',
+				'roofing-orange': 'hsl(var(--roofing-orange))',
+				'roofing-navy': 'hsl(var(--roofing-navy))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
