@@ -112,7 +112,7 @@ const Footer = () => {
                 <h4 className="font-semibold mb-2">Contact Form</h4>
                 <button 
                   onClick={() => window.open('mailto:dsisolutions@gmail.com', '_self')}
-                  className="text-white hover:text-yellow-400 transition-colors cursor-pointer hover:scale-105 duration-200"
+                  className="text-white hover:text-yellow-400 transition-all duration-300 cursor-pointer hover:scale-105 hover:bg-white/10 px-3 py-2 rounded-md border border-transparent hover:border-yellow-400"
                 >
                   News Update (Subscribe)
                 </button>
