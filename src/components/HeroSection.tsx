@@ -30,7 +30,7 @@ const HeroSection = () => {
           {images.map((image, index) => (
             <CarouselItem key={index}>
               <Card className="border-0 rounded-none">
-                <CardContent className="flex aspect-square items-center justify-center p-0">
+                <CardContent className="flex items-center justify-center p-0">
                   <div 
                     className="w-full h-screen bg-cover bg-center bg-no-repeat relative"
                     style={{
