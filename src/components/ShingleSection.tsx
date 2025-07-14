@@ -60,7 +60,7 @@ const ShingleSection = () => {
                               SHINGLE ROOFING SHEET
                             </h3>
                             
-                            <div className="flex flex-col md:flex-row gap-4 justify-center">
+                            <div className="flex flex-col md:flex-row gap-4 justify-center mt-2">
                               <Button 
                                 variant="roofing-primary"
                                 onClick={() => scrollToSection('gallery')}

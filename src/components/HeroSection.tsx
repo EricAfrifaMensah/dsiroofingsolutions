@@ -45,7 +45,7 @@ const HeroSection = () => {
                         </h1>
                         <div className="w-32 h-1 bg-roofing-orange mx-auto mb-8"></div>
                         
-                        <div className="flex flex-col md:flex-row gap-4 justify-center mt-8">
+                        <div className="flex flex-col md:flex-row gap-4 justify-center mt-4">
                           <Button 
                             variant="roofing-primary"
                             onClick={() => scrollToSection('gallery')}
