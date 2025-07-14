@@ -35,7 +35,7 @@ const ShingleSection = () => {
         {/* Left Side - Image Carousel */}
         <div className="relative">
           <Carousel 
-            className="w-full h-96 md:h-[500px]"
+            className="w-full h-80 md:h-[400px]"
             plugins={[
               Autoplay({
                 delay: 3000,
@@ -46,9 +46,9 @@ const ShingleSection = () => {
               {images.map((image, index) => (
                 <CarouselItem key={index}>
                   <Card className="border-0 rounded-none">
-                    <CardContent className="flex aspect-square items-center justify-center p-0">
+                    <CardContent className="flex items-center justify-center p-0">
                       <div 
-                        className="w-full h-96 md:h-[500px] bg-cover bg-center bg-no-repeat relative"
+                        className="w-full h-80 md:h-[400px] bg-cover bg-center bg-no-repeat relative"
                         style={{
                           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(${image})`
                         }}
